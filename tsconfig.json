@@ -20,6 +20,8 @@
       "@schemas/*": ["app/schemas/*"],
       "@repositories/*": ["app/repositories/*"],
       "@plugins/*": ["infra/plugins/*"],
+      "@test/*": ["test/*"],
+      "@docs/*": ["docs/*"],
       "@models/*": ["app/models/*"],
       "@lib/*": ["infra/lib/*"],
       "@interfaces/*": ["app/interfaces/*"],
