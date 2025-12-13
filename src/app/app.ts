@@ -1,7 +1,7 @@
 import fastify from "fastify";
 import swagger from "@fastify/swagger";
 import swaggerUi from "@fastify/swagger-ui";
-import routes from "app/http/routes/routes.js";
+import routes from "@routes/routes.js";
 import registerPluginsPlugin from "@plugins/decorators/registerPluginsPlugin.js";
 
 const app = fastify({
