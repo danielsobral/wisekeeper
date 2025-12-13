@@ -11,6 +11,24 @@
       "ESNext.Iterator",
       "ESNext.Promise"
     ],
+    "baseUrl": "./src",
+    "paths": {
+      "@app": ["app/app.ts"],
+      "@utils/*": ["utils/*"],
+      "@types/*": ["infra/types/*"],
+      "@services/*": ["app/services/*"],
+      "@schemas/*": ["app/schemas/*"],
+      "@repositories/*": ["app/repositories/*"],
+      "@plugins/*": ["infra/plugins/*"],
+      "@models/*": ["app/models/*"],
+      "@lib/*": ["infra/lib/*"],
+      "@interfaces/*": ["app/interfaces/*"],
+      "@controllers/*": ["app/http/controllers/*"],
+      "@middlewares/*": ["app/http/middlewares/*"],
+      "@routes/*": ["app/http/routes/*"],
+      "@dtos/*": ["app/dtos/*"],
+      "@config/*": ["config/*"]
+    },
     "module": "nodenext",
     "target": "es2024",
 
@@ -18,5 +36,6 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "moduleResolution": "node16"
-  }
+  },
+  "include": ["./src"]
 }
