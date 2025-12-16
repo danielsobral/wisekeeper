@@ -7,11 +7,9 @@ const start = async () => {
       console.error(err);
       process.exit(1);
     }
-    server.log.info(`http server listening on ${address}`);
-    console.log(`🔥 http server running on ${environment}`);
-    console.log(
-      `📚 access the API documentation here http://localhost:3000/docs`,
-    );
+    server.log.info(`HTTP server listening on ${address}`);
+    console.log(`🔥 HTTP server running on ${environment}`);
+    console.log(`📚 Docs available at http://localhost:3000/docs`);
   });
 };
 start();

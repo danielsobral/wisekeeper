@@ -1,6 +1,7 @@
+import { z } from "zod";
 export const logInDocs: object = {
   schema: {
-    description: "get some data",
+    description: "post some data",
     tags: ["auth"],
     summary: "qwerty",
     security: [{ apiKey: [] }],

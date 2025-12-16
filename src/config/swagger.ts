@@ -1,3 +1,5 @@
+import { jsonSchemaTransform } from "fastify-type-provider-zod";
+
 export const swaggerOptions: object = {
   openapi: {
     openapi: "3.0.0",
@@ -31,4 +33,5 @@ export const swaggerOptions: object = {
       description: "Find more info in our repositori",
     },
   },
+  Transform: jsonSchemaTransform,
 };
