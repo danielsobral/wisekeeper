@@ -1,6 +1,6 @@
 export const logInDocs: object = {
   schema: {
-    description: "post some data",
+    description: "get some data",
     tags: ["auth"],
     summary: "qwerty",
     security: [{ apiKey: [] }],
