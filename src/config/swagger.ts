@@ -1,5 +1,3 @@
-import type { FastifySwaggerUiOptions } from "@fastify/swagger-ui";
-
 export const swaggerOptions: object = {
   openapi: {
     openapi: "3.0.0",
@@ -33,22 +31,4 @@ export const swaggerOptions: object = {
       description: "Find more info in our repositori",
     },
   },
-};
-
-export const swaggerUIOptions: FastifySwaggerUiOptions = {
-  routePrefix: "/docs",
-  uiConfig: {
-    docExpansion: "list",
-    deepLinking: true,
-  },
-  uiHooks: {
-    onRequest: function (request, reply, next) {
-      next();
-    },
-    preHandler: function (request, reply, next) {
-      next();
-    },
-  },
-  staticCSP: true,
-  transformStaticCSP: (header) => header,
 };

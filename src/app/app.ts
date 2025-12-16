@@ -1,9 +1,10 @@
 import fastify from "fastify";
 import swagger from "@fastify/swagger";
-import swaggerUi from "@fastify/swagger-ui";
 import routes from "@routes/routes.js";
 import registerPluginsPlugin from "@plugins/decorators/registerPluginsPlugin.js";
-import { swaggerOptions, swaggerUIOptions } from "@config/swagger.js";
+import { swaggerOptions } from "@config/swagger.js";
+import { scalarOptions } from "@config/scalar.js";
+import scalar from "@scalar/fastify-api-reference";
 
 const app = fastify({
   logger: false,
@@ -13,7 +14,7 @@ await app.register(registerPluginsPlugin);
 
 await app.registerPlugins([
   { plugin: swagger, options: swaggerOptions },
-  { plugin: swaggerUi, options: swaggerUIOptions },
+  { plugin: scalar, options: scalarOptions },
   { plugin: routes, options: {} },
 ]);
 
