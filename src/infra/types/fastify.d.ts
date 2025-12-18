@@ -6,7 +6,7 @@ declare module "fastify" {
       plugins: Array<{
         plugin: any;
         options?: object;
-      }>
+      }>,
     ): Promise<void>;
   }
 }

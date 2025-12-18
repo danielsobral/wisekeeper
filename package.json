@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx --watch ./src/app/http/server.ts",
-    "test": "vitest --watch"
+    "test": "vitest --watch",
+    "lint:check": "prettier --check .",
+    "lint:fix": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
   "homepage": "https://github.com/danielsobral/wisekeeper#readme",
   "devDependencies": {
     "@types/node": "^25.0.0",
+    "prettier": "^3.7.4",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vitest": "^4.0.15"
