@@ -18,6 +18,7 @@ export const swaggerOptions: object = {
     tags: [
       { name: "auth", description: "Auth related end-points" },
       { name: "user", description: "User related end-points" },
+      { name: "status", description: "Information on services status" },
     ],
     components: {
       securitySchemes: {

@@ -7,11 +7,11 @@ import {
 import { fastifyCors } from "@fastify/cors";
 import swagger from "@fastify/swagger";
 import routes from "@routes/routes.js";
-import registerPluginsPlugin from "@plugins/decorators/registerPluginsPlugin.js";
-import { swaggerOptions } from "@config/swagger.js";
-import { scalarOptions } from "@config/scalar.js";
+import registerPluginsPlugin from "@plugins/fastify/decorators/registerPluginsPlugin.js";
+import { swaggerOptions } from "@config/ui/swagger/swagger.js";
+import { scalarOptions } from "@config/ui/scalar/scalar.js";
 import scalar from "@scalar/fastify-api-reference";
-import { fastifyCorsPlugin } from "@plugins/fastify/cors.js";
+import { fastifyCorsPlugin } from "@plugins/fastify/cors/config.js";
 
 const app = fastify({
   logger: false,
@@ -29,6 +29,6 @@ await app.registerPlugins([
   { plugin: routes, options: {} },
 ]);
 
-let environment = "http://localhost:3000/api/v1/auth";
+let environment = "http://localhost:3000/api/v1/status";
 
 export { app, environment };

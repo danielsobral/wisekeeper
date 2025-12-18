@@ -1,5 +1,5 @@
 import { z } from "zod";
-export const logInDocs: object = {
+export const logInDocs = {
   schema: {
     description: "post some data",
     tags: ["auth"],
