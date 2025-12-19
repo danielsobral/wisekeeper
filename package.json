@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx --watch ./src/app/http/server.ts",
+    "dev": "npm run services:up && tsx --watch ./src/app/http/server.ts",
+    "services:up": "docker compose -f ./src/infra/containers/development/compose.yaml up -d",
+    "services:stop": "docker compose -f ./src/infra/containers/development/compose.yaml stop",
+    "services:down": "docker compose -f ./src/infra/containers/development/compose.yaml down",
     "test": "vitest --watch",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write ."
@@ -33,6 +36,8 @@
     "@fastify/swagger": "^9.6.1",
     "@fastify/swagger-ui": "^5.2.3",
     "@scalar/fastify-api-reference": "^1.40.5",
+    "dotenv": "^17.2.3",
+    "dotenv-expand": "^12.0.3",
     "fastify": "^5.6.2",
     "fastify-type-provider-zod": "^6.1.0",
     "zod": "^4.1.13"
